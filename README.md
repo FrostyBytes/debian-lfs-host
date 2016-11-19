@@ -16,6 +16,8 @@ Version v001: The assembled filesystems pass the LFS "Host System
 Requirements", but it has not been tested whether they are sufficient
 for building LFS.
 
+<https://github.com/FrostyBytes/debian-lfs-host/releases/tag/v001>
+
 ```
 205D9A3C
 ```
