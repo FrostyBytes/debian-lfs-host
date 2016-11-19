@@ -6,7 +6,7 @@ software programs that are licensed under their own respective
 licenses that may be less permissive than "The Unlicense".
 
 The filesystems released are signed with the below key, which has also
-been submitted to the gpg.mit.edu keyserver. Each binary file has a
+been submitted to the pgp.mit.edu keyserver. Each binary file has a
 corresponding signature file, and checksums have also been included in
 a clearsigned message below.
 
