@@ -1,9 +1,14 @@
 # debian-lfs-host
 
+```
 205D9A3C
+```
 
+```
 Key fingerprint = 3119 A3C6 DF9E 8C74 E324  EBCF BF52 ACDB 205D 9A3C
+```
 
+```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
 
@@ -55,7 +60,9 @@ xcfJEjWIrb7LuBLGwgvngOOvtChj2nEzF+eWe/XHqOX4MTQukvjTlZV1l+54FzIa
 dsFbl2KIdNFI15PMeWA3tQdVnQwgk4WEYgg=
 =VwlJ
 -----END PGP PUBLIC KEY BLOCK-----
+```
 
+```
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
@@ -93,3 +100,4 @@ FO1QmJwS5zlmevCURO01vlxYkRVNPaylLdvKzgEJO6temUHRYH0IcCufcuiQZT9R
 xZw5LSqALExFbvkFiWb3
 =aEI3
 -----END PGP SIGNATURE-----
+```
