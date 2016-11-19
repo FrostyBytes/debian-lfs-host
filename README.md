@@ -6,13 +6,13 @@ software programs that are licensed under their own respective
 licenses that may be less permissive than "The Unlicense".
 
 The filesystems released are signed with the below key, which has also
-been submitted to the pgp.mit.edu keyserver. Each binary file has a
+been submitted to the `pgp.mit.edu` keyserver. Each binary file has a
 corresponding signature file, and checksums have also been included in
 a clearsigned message below.
 
 Status:
 
-Version v001: The assembled filesystems pass the LFS "Host System
+Version `v001`: The assembled filesystems pass the LFS "Host System
 Requirements", but it has not been tested whether they are sufficient
 for building LFS. Binaries available here:
 <https://github.com/FrostyBytes/debian-lfs-host/releases/tag/v001>
