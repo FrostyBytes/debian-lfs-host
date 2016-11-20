@@ -22,32 +22,61 @@ BUILDDIR=/tmp/build-debian-lfs-host
 mkdir -p "$BUILDDIR"
 while mountpoint -q "$BUILDDIR"
 do
-  umount "$BUILDDIR"/root-{i386,x86_64}/{dev/pts,dev,proc} "$BUILDDIR" || sleep 1
+  umount "$BUILDDIR"/root/{dev/pts,dev,proc} "$BUILDDIR" || sleep 1
 done
 mount -t tmpfs none "$BUILDDIR"
 cd "$BUILDDIR"
 
-function farch()
+function f()
 {
   ARCH="$1"
-  debootstrap jessie root-"$ARCH" http://ftp.us.debian.org/debian
-  mount --bind /proc ./root-"$ARCH"/proc
-  mount --bind /dev ./root-"$ARCH"/dev
-  mount --bind /dev/pts ./root-"$ARCH"/dev/pts
-  env -i PATH="$HARDPATH" chroot ./root-"$ARCH" bash --norc --noprofile -c '
+  SUITE="$2"
+  WITHSOURCE="$3"
+  debootstrap --arch="$ARCH" "$SUITE" root http://ftp.us.debian.org/debian
+  mount --bind /proc ./root/proc
+  mount --bind /dev ./root/dev
+  mount --bind /dev/pts ./root/dev/pts
+  function g()
+  {
+    env -i PATH="$HARDPATH" chroot ./root bash --norc --noprofile -c "$1"
+  }
+  g '
 export DEBIAN_FRONTEND=noninteractive
 export LANG=C
 apt-get -y install locales
 echo en_US.UTF-8 UTF-8 >/etc/locale.gen
 locale-gen
 export LANG=en_US.UTF-8
-apt-get -y install build-essential bison gawk m4 texinfo
+cat >/etc/apt/sources.list <<EOF
+deb     http://ftp.us.debian.org/debian '"$SUITE"' main
+deb-src http://ftp.us.debian.org/debian '"$SUITE"' main
+EOF
+apt-get update
+apt-get -y install build-essential bison gawk m4 texinfo file
 '
-  umount ./root-"$ARCH"/dev/pts ./root-"$ARCH"/dev ./root-"$ARCH"/proc
-  tar -zf ./debian-lfs-host-"$ARCH"-`date +%s`.tar.gz -C ./root-"$ARCH" -c .
+  if [ "$WITHSOURCE" == "y" ]
+  then
+    g '
+mkdir /deb-src
+cd /deb-src
+dpkg -l | sed -e "s/[ \t]\+/ /g" | egrep "^ii[ ]" | cut -d " " -f 2 | xargs apt-get --download-only -y source
+'
+  fi
+  umount ./root/dev/pts ./root/dev ./root/proc
+  FN=./debian-lfs-host-"$SUITE"-"$ARCH"-"$STAMP"
+  if [ "$WITHSOURCE" == "y" ]
+  then
+    FN="$FN""-with-sources"
+  fi
+  tar -zf ./"$FN".tar.gz -C ./root -c .
 }
 
-for i in i386 x86_64
+STAMP="`date +%s`"
+
+for w in n y
 do
-  farch "$i"
+  for a in amd64 i386
+  do
+    f "$a" jessie "$w"
+  done
 done
