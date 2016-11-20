@@ -12,8 +12,9 @@ a clearsigned message below.
 
 Status:
 
-Version `v002`: Tested up to LFS step gcc pass 2. Binaries available
-here:
+Version `v002`: Tested up to LFS step gcc pass 2 (inclusive). The rest
+can be expected to work smoothly; continued testing is
+ongoing. Binaries available here:
 <https://github.com/FrostyBytes/debian-lfs-host/releases/tag/v002>. The
 `-with-sources` archives contain package sources as well for improved
 license compliance.
