@@ -12,12 +12,17 @@ a clearsigned message below.
 
 Status:
 
-Version `v002`: Tested up to LFS step gcc pass 2.
+Version `v002`: Tested up to LFS step gcc pass 2. Binaries available
+here:
+<https://github.com/FrostyBytes/debian-lfs-host/releases/tag/v001>. The
+`-with-sources` archives contain package sources as well for improved
+license compliance.
 
 Version `v001`: The assembled filesystems pass the LFS "Host System
 Requirements", but it has not been tested whether they are sufficient
-for building LFS. Binaries available here:
-<https://github.com/FrostyBytes/debian-lfs-host/releases/tag/v001>
+for building LFS. The `v001` binaries have been removed as it was
+realized that is technically in volation of GPL to distribute without
+sources, even if the sources are widely available elsewhere.
 
 ```
 205D9A3C
@@ -108,45 +113,5 @@ LaxF8GvbAOaZyEzC0Ayk6JNLy36z4fqaJh7beXZgx+6/apN/DjIdY3jItXlntF/7
 NXY4hffvgC78N7liG+DjiFDNCxU1tNr7aMbfFOiPf1uk2T9NbcEEXv6/n11RwM1N
 zdv8fhYSbrLr9blkttYw
 =ky1P
------END PGP SIGNATURE-----
-```
-
-`v001`:
-
-```
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-md5sum:
-c872b908523e184afdb2bb53e9d71479  debian-lfs-host-i386-001.tar.gz
-574374f38c07f6cbdc096c557bb052c1  debian-lfs-host-i386-001.tar.lzo
-411cc750837ea10c2565f2d5eef61d00  debian-lfs-host-x86_64-001.tar.gz
-184afdff598dd70edbfeb6d16b65e5fb  debian-lfs-host-x86_64-001.tar.lzo
-sha256sum:
-774d0244da3c0ca8c4fc67746992e04f9c4e5661e9d115ec9d43d880829eaf80  debian-lfs-host-i386-001.tar.gz
-2194fa6c620f3610518cac600ae47347359d2e0da244c34f24343d572f1e2c72  debian-lfs-host-i386-001.tar.lzo
-f7c2a00d8f88ea6e35917dd33a9bce50176cd7e492521d643bb14f70f4558798  debian-lfs-host-x86_64-001.tar.gz
-e76039f37fb092b70a3fabf90371107b03316079803bc05d51a09c0b63427a65  debian-lfs-host-x86_64-001.tar.lzo
-sha512sum:
-b7424c43108f96236588ae00c0d8814c0cfcd13db5dca1d923c6f52bb7bf8856b767974f51cfac34d1882e2c7b11de75f01f351105ed96b5bb95979d93a9e095  debian-lfs-host-i386-001.tar.gz
-22c173da959d40178c4c4d9d0b4d328d3ab418bc06df55cb6ab939be77b9b17b29a224fce4ab17cea4a47d241f62039cba31b8fb263e94bdeb29111af1ac37f4  debian-lfs-host-i386-001.tar.lzo
-439429f3a6378c50a01c4fab4eb553091fdb1a356db43c196bcc03bec10e636bb1c90bab2bb60d98ac185c9e09738c992642df584d0cae16d6c8fe9094da497c  debian-lfs-host-x86_64-001.tar.gz
-793a0a27b3066ed0e275752400b42edac5a93adfda8e3722abaffeae6db13081b4407e80d7ba4165e143ffb8c5ee18e2a3c22626c87be34e1e29808ac056e792  debian-lfs-host-x86_64-001.tar.lzo
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1
-
-iQIcBAEBAgAGBQJYL9BiAAoJEL9SrNsgXZo8gAwP/2mJvLjRhW21xlLNyc8S0RX3
-82ZXHKmH9vA8YnqkaaekGiVs+Dr7Z1/mojQWq0zhQWDSESGTknruGm1M+VjqoWtc
-b7LM2HabY3106YABN8XorlHXkklIBj42fxklw8+doykFQRM9pHTF6aCEukWj9PQ/
-l22LBBK4v0soJAFV0BsXAgIgsBqI31NiwIGIraEXVFod7pwETPRVdPUEE7wIz2CN
-65c6e9wgP6ndlSchR5FqqAd9+QdkPg+8/UCAKihHFDbRm+i33OO/+Y7klY13ZaRT
-JrPU0vfA4Feg7w9JgEeugCHepeWnPSSeXa1zgamq2FKlklnZCwGwoDAs/emJTxfj
-YurUtNYwd4dqtT6s6+/9EQgU4PhoeHEgCx7vJGnAVeR9mzuif41yfK4bq+DI3PUO
-PWCrtMC4o4UzOFnY6YZvMLoL4nMqHZK24Jzn0LzEEuC+KFctVZzDVfkE8gM0ZQbB
-1djmgN+Ctd0SEM2QviOaOdwgbm1+dkOlpncP4Z8cL/Fgacb8uuemEaQlP6Lw16ag
-xqO8PQtdqMWrg5JzP8yVB607eyj4BpVxBdexhlviM2Se/N+Z5r/7qAoLi8xVmKjT
-nNr5ylmmil+HB1WrJFEeXbTDDd7ZY5SkyIUmD3ur4e/JioBcB+5ebwY5lOKKV4yH
-nF8nFk3Afe1HPRSk0QBd
-=RK5P
 -----END PGP SIGNATURE-----
 ```
