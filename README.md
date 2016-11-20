@@ -12,6 +12,8 @@ a clearsigned message below.
 
 Status:
 
+Version `v002`: Tested up to LFS step gcc pass 2.
+
 Version `v001`: The assembled filesystems pass the LFS "Host System
 Requirements", but it has not been tested whether they are sufficient
 for building LFS. Binaries available here:
@@ -78,6 +80,38 @@ dsFbl2KIdNFI15PMeWA3tQdVnQwgk4WEYgg=
 =VwlJ
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+
+`v002`:
+
+```
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+sha256sums:
+bf6a681730acddc8545c60dd5888bfdc6402bc55cc33131b0f540c8503c062eb  debian-lfs-host-jessie-amd64-1479677148.tar.gz
+e74f5f8d8a1a29fe6663ea8048fcb29d565ff8979986f8e4ac836cc8f6701b21  debian-lfs-host-jessie-amd64-1479677148-with-sources.tar.gz
+e0669a17dab613c6afd79ce8b73e87557cc8c6e0ca71be920cb958fdbd81231b  debian-lfs-host-jessie-i386-1479677148.tar.gz
+fcc237d317cd3aa410ef00f59a586c62a95b457206d43f8b0b82d9eda29d6ac9  debian-lfs-host-jessie-i386-1479677148-with-sources.tar.gz
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+
+iQIcBAEBAgAGBQJYMijTAAoJEL9SrNsgXZo8j10P/jCo3fXBgSN3Tc+4CtWPUEV6
+4Zk2HavJjurJIg/L5tAeeil7pHaEGfyNzaWjie9vINzukil8yjcYSCkhCMV8ckBP
+7pAUrDGE5wjdsZcU1SDVqwu6hzB3pWP6hi2bHL2FmKBbzAYu9Y8hLnbyPdqmlioe
++MGPhrxaDyWI5FWmyOY3OyaG3CSqkIIQY1DcHjNY8KJmYLc7vUD17FJr2dBFvTrM
+zOHtwbzl0HI43/w/kQ94YOi9bxFxowb/Wwh5Jh2PR9vHiGqHEHmJCBPGSL+Er0um
+xI2Yix8hY0yFzlez5YibwWC7bLZIkg/GkeMnnyKTn2nZWUdLMsc8Xn61ByyO0sPV
+bjXt0VO/j/KU9mgmzgXIPn/RsdfDjwMMYBe3OYFukT/8KHziZdhqB8MpAmgc1m3l
+W9ikoBXMNZNB+VmAezGwdFgEt0kul0HJO5tdBNDbt8jF7+r+z/D+OG/yrDZcXnXO
+uvJBEz+Tzwnx+1R3PjhONXAE+4rhwCHwcHk+nPGoGMveFTtrXJJuaMpAkOyOf03z
+LaxF8GvbAOaZyEzC0Ayk6JNLy36z4fqaJh7beXZgx+6/apN/DjIdY3jItXlntF/7
+NXY4hffvgC78N7liG+DjiFDNCxU1tNr7aMbfFOiPf1uk2T9NbcEEXv6/n11RwM1N
+zdv8fhYSbrLr9blkttYw
+=ky1P
+-----END PGP SIGNATURE-----
+```
+
+`v001`:
 
 ```
 -----BEGIN PGP SIGNED MESSAGE-----
